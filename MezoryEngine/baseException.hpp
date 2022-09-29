@@ -1,5 +1,5 @@
-#ifndef BounceBall_BaseException_HPP
-#define BounceBall_BaseException_HPP
+#ifndef BaseException_HPP
+#define BaseException_HPP
 #include <exception>
 #include <iostream>
 

@@ -1,5 +1,5 @@
-#ifndef BounceBall_TEXTURE_MANAGER_HPP
-#define BounceBall_TEXTURE_MANAGER_HPP
+#ifndef TEXTURE_MANAGER_HPP
+#define TEXTURE_MANAGER_HPP
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 #include "stb_image.h"

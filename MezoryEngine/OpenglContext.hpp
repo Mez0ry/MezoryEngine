@@ -1,9 +1,9 @@
-#ifndef BounceBall_OPENGL_CONTEXT_HPP
-#define BounceBall_OPENGL_CONTEXT_HPP
+#ifndef OPENGL_CONTEXT_HPP
+#define OPENGL_CONTEXT_HPP
 #include <iostream>
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
-#include "init_error.h"
+#include "init_error.hpp"
 
 #define WINDOW_HEIGHT 800
 #define WINDOW_WIDTH 800

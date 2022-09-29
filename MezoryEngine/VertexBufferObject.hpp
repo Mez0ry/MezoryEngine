@@ -1,5 +1,5 @@
-#ifndef BounceBall_VERTEX_BUFFER_OBJECT_HPP
-#define BounceBall_VERTEX_BUFFER_OBJECT_HPP
+#ifndef VERTEX_BUFFER_OBJECT_HPP
+#define VERTEX_BUFFER_OBJECT_HPP
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 

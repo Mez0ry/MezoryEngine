@@ -1,5 +1,5 @@
-#ifndef BounceBall_INIT_ERROR_HPP
-#define BounceBall_INIT_ERROR_HPP
+#ifndef INIT_ERROR_HPP
+#define INIT_ERROR_HPP
 #include "baseException.hpp"
 class init_error : public baseException {
 public:

@@ -1,5 +1,5 @@
-#ifndef BounceBall_ShaderManager_HPP
-#define BounceBall_ShaderManager_HPP
+#ifndef ShaderManager_HPP
+#define ShaderManager_HPP
 #include <iostream>
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
