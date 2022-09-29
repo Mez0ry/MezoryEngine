@@ -310,6 +310,15 @@ MezoryEngine_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 MezoryEngine_SOURCE_DIR:STATIC=D:/GithubReposes/MezoryEngine
 
+//Value Computed by CMake
+Stb_BINARY_DIR:STATIC=D:/GithubReposes/MezoryEngine/build/vendor/stb
+
+//Value Computed by CMake
+Stb_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+Stb_SOURCE_DIR:STATIC=D:/GithubReposes/MezoryEngine/vendor/stb
+
 //Use MSVC runtime library DLL
 USE_MSVC_RUNTIME_LIBRARY_DLL:BOOL=ON
 
@@ -436,7 +445,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib

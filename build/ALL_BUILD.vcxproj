@@ -185,6 +185,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{DDDF24A2-73A7-3FDC-B6E5-67356DF929C5}</Project>
       <Name>glfw</Name>
     </ProjectReference>
+    <ProjectReference Include="D:\GithubReposes\MezoryEngine\build\vendor\stb\stb.vcxproj">
+      <Project>{7FD477B7-946B-3197-BFD6-FE77E06F063A}</Project>
+      <Name>stb</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

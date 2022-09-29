@@ -4,11 +4,52 @@
     <ClCompile Include="D:\GithubReposes\MezoryEngine\MezoryEngine\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\GithubReposes\MezoryEngine\MezoryEngine\OpenglContext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\GithubReposes\MezoryEngine\MezoryEngine\ShaderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\GithubReposes\MezoryEngine\MezoryEngine\TextureManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\GithubReposes\MezoryEngine\MezoryEngine\VertexArrayObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\GithubReposes\MezoryEngine\MezoryEngine\VertexBufferObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\GithubReposes\MezoryEngine\MezoryEngine\baseException.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\GithubReposes\MezoryEngine\MezoryEngine\init_error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\GithubReposes\MezoryEngine\MezoryEngine\OpenglContext.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\GithubReposes\MezoryEngine\MezoryEngine\ShaderManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\GithubReposes\MezoryEngine\MezoryEngine\TextureManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\GithubReposes\MezoryEngine\MezoryEngine\VertexArrayObject.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\GithubReposes\MezoryEngine\MezoryEngine\VertexBufferObject.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\GithubReposes\MezoryEngine\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{D4C8338A-A3C0-3A6F-85DB-70FC44FD241B}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{07A7A20D-DC2E-3034-AEA5-6A569EF68745}</UniqueIdentifier>
     </Filter>

@@ -2,7 +2,7 @@
 #define BounceBall_TEXTURE_MANAGER_HPP
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
-#include "stb/stb_image.h"
+#include "stb_image.h"
 #include <iostream>
 class TextureManager
 {

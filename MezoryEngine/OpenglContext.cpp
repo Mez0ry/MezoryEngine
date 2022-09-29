@@ -24,7 +24,7 @@ void OpenglContext::Initialize()
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-		pWindow_ = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "BounceBall game", nullptr, nullptr);
+		pWindow_ = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "MezoryEngine", nullptr, nullptr);
 
 		if (!pWindow_) {
 			ex_data.what_ = "glfw failed, window not created";

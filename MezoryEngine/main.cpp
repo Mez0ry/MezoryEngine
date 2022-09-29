@@ -2,7 +2,7 @@
 #include "GLFW/glfw3.h"
 #include "OpenglContext.hpp"
 #include "ShaderManager.hpp"
-#include "stb/stb_image.h"
+#include "stb_image.h"
 #include "VertexBufferObject.hpp"
 #include "VertexArrayObject.hpp"
 #include "TextureManager.hpp"
@@ -64,8 +64,6 @@ int main() {
 
 	glClearColor(0.0f, 0.f, 0.f, 1.f);
 	ShaderManager shader_manager;
-	 
- 
 
 	TextureManager antTexture;
 
@@ -75,7 +73,7 @@ int main() {
 	antTexture.set_TextureParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 	int width, height, nrChannels;
-	antTexture.LoadAndGenerateTexture("ant.jpg", width, height, nrChannels, 0);
+	antTexture.LoadAndGenerateTexture("D:\\GithubReposes\\MezoryEngine\\MezoryEngine\\ant.jpg", width, height, nrChannels, 0);
 
 	GLuint vs, fs, pid;
 	shader_manager.CreateShader(vertex_shader, GL_VERTEX_SHADER, vs);

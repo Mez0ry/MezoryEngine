@@ -36,6 +36,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("D:/GithubReposes/MezoryEngine/build/vendor/glfw/cmake_install.cmake")
   include("D:/GithubReposes/MezoryEngine/build/vendor/glad/cmake_install.cmake")
+  include("D:/GithubReposes/MezoryEngine/build/vendor/stb/cmake_install.cmake")
 
 endif()
 
