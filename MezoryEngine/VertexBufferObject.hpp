@@ -11,8 +11,8 @@ public:
 	VertexBufferObject(unsigned int size, const void* data);
 	~VertexBufferObject();
 
-	void bind();
-	void unBind();
+	void Bind();
+	void UnBind();
 
 	GLuint get_id() { return vbo_id_; }
 private:

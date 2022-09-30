@@ -15,14 +15,14 @@ public:
 	VertexArrayObject(GLenum type);
 	~VertexArrayObject();
 
-	/**
-	* @brief Setting up attribute pointer
-	*/
+/**
+* @brief Setting up attribute pointer
+*/
 	void BindVboToLocation(const GLuint location_index, const GLint size, VertexBufferObject& obj, GLboolean normalized, GLsizei stride, const void* pointer);
 	
 	void BindVertexArray();
 
-	void unbind();
+	void UnBind();
 	
 private:
 

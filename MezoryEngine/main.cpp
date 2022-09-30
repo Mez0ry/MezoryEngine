@@ -39,7 +39,8 @@ const char *vertex_shader = {
 	" gl_Position = vec4(vertex_position, 1.0);"
 	" ourColor = color;"
 	" TexCoord = texture_coords;"
-	"}"};
+	"}"
+};
 
 const char *fragment_shader = {
 	"#version 460\n"
@@ -53,7 +54,7 @@ const char *fragment_shader = {
 	"void main(){ "
 	"  FragColor = texture(ourTexture, TexCoord);"
 	"}"
-	};
+};
 
 int main() {
 	OpenglContext glContext;
@@ -64,13 +65,12 @@ int main() {
 
 	TextureManager antTexture;
 
-	antTexture.set_TextureParams(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	antTexture.set_TextureParams(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	antTexture.set_TextureParams(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-	antTexture.set_TextureParams(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	antTexture.set_TextureParami(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+	antTexture.set_TextureParami(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+	antTexture.set_TextureParami(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+	antTexture.set_TextureParami(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-	int width, height, nrChannels;
-	antTexture.LoadAndGenerateTexture("D:\\GithubReposes\\MezoryEngine\\MezoryEngine\\ant.jpg", width, height, nrChannels, 0);
+	antTexture.LoadAndGenerate2DTexture("..\\MezoryEngine\\ant.jpg", 0);
 
 	GLuint vs, fs, pid;
 	shader_manager.CreateShader(vertex_shader, GL_VERTEX_SHADER, vs);
@@ -96,9 +96,11 @@ int main() {
 	while (!glfwWindowShouldClose(glContext.get_window())) {
 		glClearColor(1.0f, 1.f, 0.f, 1.f);
 		glClear(GL_COLOR_BUFFER_BIT);
+
 		InputHandler::EngineEvent ev;
 		if (InputHandler::EnginePollEvent(glContext.get_window(), &ev))
 		{
+			std::cout << "Mouse x: " << ev.mouse_pos.x << "Mouse y: " << ev.mouse_pos.y;
 			switch (ev.state)
 			{
 			case GLFW_PRESS: {
@@ -107,14 +109,16 @@ int main() {
 					 
 					break;
 				}
+				case GLFW_KEY_ESCAPE: {
+					glfwSetWindowShouldClose(glContext.get_window(), GL_TRUE);
+					break;
+				}
 				} // !switch ev.key
 				break;
 			}
 			} // !switch ev.state
 		}
-		else {
-			std::cout << "none";
-		}
+		 
 
 		shader_manager.UseProgram();
 

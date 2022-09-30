@@ -11,17 +11,17 @@ TextureManager::~TextureManager()
 {
 }
 
-void TextureManager::set_TextureParams(GLenum target, GLenum pname, GLint param)
+void TextureManager::set_TextureParami(GLenum target, GLenum pname, GLint param)
 {
 	glTexParameteri(texture_id_, pname, param);
 }
 
-void TextureManager::LoadAndGenerateTexture(const char* texture_path, int& width, int& height, int& nrChannels, int desired_channels)
+void TextureManager::LoadAndGenerate2DTexture(const char* texture_path, int desired_channels)
 {
-	unsigned char* data = stbi_load(texture_path, &width, &height, &nrChannels, 0);
+	unsigned char* data = stbi_load(texture_path, &width_, &height_, &nrChannels_, desired_channels);
 	if (data)
 	{
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width_, height_, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
 		glGenerateMipmap(GL_TEXTURE_2D);
 	}
 	else

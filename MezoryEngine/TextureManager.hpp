@@ -4,6 +4,7 @@
 #include "GLFW/glfw3.h"
 #include "stb_image.h"
 #include <iostream>
+
 class TextureManager
 {
 private:
@@ -12,14 +13,19 @@ public:
 	TextureManager();
 	~TextureManager();
 /**
-* @brief  set the texture wrapping/filtering options (on the currently bound texture object)
+* @brief  Set the texture wrapping/filtering options (on the currently bound texture object)
 */
-	void set_TextureParams(GLenum target, GLenum pname, GLint param);
-
-	void LoadAndGenerateTexture(const char* texture_path, int& width, int& height, int& nrChannels, int desired_channels);
+	void set_TextureParami(GLenum target, GLenum pname, GLint param);
+	/**
+	* @brief loads and generates texture
+	*/
+	void LoadAndGenerate2DTexture(const char* texture_path, int desired_channels);
 	void BindTexture(GLenum target);
 private:
- 
+	int width_;
+	int height_;
+	int nrChannels_;
+
 };
 
 #endif // !BounceBall_TEXTURE_MANAGER_HPP

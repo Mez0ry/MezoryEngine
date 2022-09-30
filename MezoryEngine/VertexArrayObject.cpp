@@ -27,7 +27,7 @@ void VertexArrayObject::BindVertexArray()
 	glBindVertexArray(vao_id_);
 }
 
-void VertexArrayObject::unbind()
+void VertexArrayObject::UnBind()
 {
 	glBindVertexArray(0);
 }

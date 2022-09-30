@@ -7,8 +7,12 @@ namespace InputHandler
 {
     struct EngineEvent
     {
+        struct MousePosition {
+            double  x,  y;
+        };
         int state;
         int key;
+        MousePosition mouse_pos;
     };
 
 /**

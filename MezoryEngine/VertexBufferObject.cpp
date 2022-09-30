@@ -12,12 +12,12 @@ VertexBufferObject::~VertexBufferObject()
 	glDeleteBuffers(1, &vbo_id_);
 }
 
-void VertexBufferObject::bind()
+void VertexBufferObject::Bind()
 {
 	glBindBuffer(GL_ARRAY_BUFFER, vbo_id_);
 }
 
-void VertexBufferObject::unBind()
+void VertexBufferObject::UnBind()
 {
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
  
