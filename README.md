@@ -1,5 +1,5 @@
 # MezoryEngine
-Simple open source engine
+Simple open source game engine
  ##  ***_CMake_***
   **1. cd "path to MezoryEngine", for example: cd "D:\MezoryEngine"**
   
