@@ -69,6 +69,7 @@ Engine::Engine() : engineLoop_(true)
 	shaderManager_.CreateShader(vertex_shader, GL_VERTEX_SHADER, vs);
 	shaderManager_.CreateShader(fragment_shader, GL_FRAGMENT_SHADER, fs);
 	shaderManager_.LinkShader(pid, vs, fs);
+	
 }
 
 Engine::~Engine()

@@ -8,6 +8,7 @@
 #include "VertexArrayObject.hpp"
 #include "VertexBufferObject.hpp"
 #include "TextureManager.hpp"
+#include "SceneStateMachine.hpp"
 
 class Engine
 {
@@ -20,6 +21,8 @@ public:
 	~Engine();
 	
 	void Play();
+private:
+	SceneStateMachine sceneStateMachine_;
 private:
 	ShaderManager shaderManager_;
 	TextureManager textureManager_;
