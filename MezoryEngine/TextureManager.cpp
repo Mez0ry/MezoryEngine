@@ -2,13 +2,19 @@
 
 TextureManager::TextureManager()
 {
-	glGenTextures(1, &texture_id_);
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, texture_id_);
+	 
 }
 
 TextureManager::~TextureManager()
 {
+	glDeleteTextures(1, &texture_id_);
+}
+
+void TextureManager::setup()
+{
+	glGenTextures(1, &texture_id_);
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, texture_id_);
 }
 
 void TextureManager::set_TextureParami(GLenum target, GLenum pname, GLint param)

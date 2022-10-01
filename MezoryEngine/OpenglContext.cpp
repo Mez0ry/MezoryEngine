@@ -43,5 +43,4 @@ void OpenglContext::Initialize()
 		std::cout << ex.what() << static_cast<char>('\n') << "Error code: " << ex.err_code() << '\n';
 	}
 
-
 }

@@ -13,7 +13,6 @@ ShaderManager::ShaderManager(const char* vs, const char* fs)
 
 	glDeleteShader(vs_id);
 	glDeleteShader(fs_id);
-	 
 }
 
 ShaderManager::~ShaderManager()

@@ -1,18 +1,16 @@
 #include "VertexArrayObject.hpp"
 #include "VertexBufferObject.hpp"
 
+VertexArrayObject::~VertexArrayObject()
+{
+	glDeleteVertexArrays(1, &vao_id_);
+}
 
-VertexArrayObject::VertexArrayObject(GLenum type)
+void VertexArrayObject::GenAndBindVAO(GLenum type)
 {
 	this->type_ = type;
 	glGenVertexArrays(1, &vao_id_);
 	BindVertexArray();
-}
-
-
-VertexArrayObject::~VertexArrayObject()
-{
-	glDeleteVertexArrays(1, &vao_id_);
 }
 
 void VertexArrayObject::BindVboToLocation(const GLuint location_index, const GLint size, VertexBufferObject& obj, GLboolean normalized, GLsizei stride, const void* pointer)

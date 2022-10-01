@@ -13,8 +13,8 @@ struct __exception_data {
 class baseException : public std::exception
 {
 public:
-	baseException() : data_("",0) { }
-	baseException(char const* str, int code) { data_.what_ = str; data_.code_ = code; }
+	baseException() noexcept : data_("",0) { }
+	baseException(char const* str, int code) noexcept { data_.what_ = str; data_.code_ = code; }
 	~baseException() = default;
 
 	_NODISCARD  char const* what() const override { return data_.what_ ? data_.what_ : "Unknown exception"; }

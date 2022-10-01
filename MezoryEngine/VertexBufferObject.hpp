@@ -8,6 +8,7 @@ class VertexBufferObject
 private:
 	GLuint vbo_id_;
 public:
+	VertexBufferObject() = default;
 	VertexBufferObject(unsigned int size, const void* data);
 	~VertexBufferObject();
 

@@ -12,8 +12,10 @@ private:
 	GLuint vao_id_;
 	GLenum type_;
 public:
-	VertexArrayObject(GLenum type);
+	VertexArrayObject() = default;
 	~VertexArrayObject();
+
+	void GenAndBindVAO(GLenum type);
 
 /**
 * @brief Setting up attribute pointer

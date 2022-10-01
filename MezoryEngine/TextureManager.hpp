@@ -12,13 +12,15 @@ private:
 public:
 	TextureManager();
 	~TextureManager();
+
+	void setup();
 /**
-* @brief  Set the texture wrapping/filtering options (on the currently bound texture object)
+* @brief Set the texture wrapping/filtering options (on the currently bound texture object)
 */
 	void set_TextureParami(GLenum target, GLenum pname, GLint param);
-	/**
-	* @brief loads and generates texture
-	*/
+/**
+* @brief loads and generates texture
+*/
 	void LoadAndGenerate2DTexture(const char* texture_path, int desired_channels);
 	void BindTexture(GLenum target);
 private:

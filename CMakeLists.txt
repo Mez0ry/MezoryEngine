@@ -5,9 +5,9 @@ set(ProjectName MezoryEngine)
 project(${ProjectName})
 
 set (CMAKE_CXX_STANDARD 17)
-							  #cpp
-add_executable(${ProjectName} ${ProjectName}/main.cpp ${ProjectName}/OpenglContext.cpp ${ProjectName}/ShaderManager.cpp ${ProjectName}/TextureManager.cpp ${ProjectName}/VertexArrayObject.cpp ${ProjectName}/VertexBufferObject.cpp ${ProjectName}/InputHandler.cpp ${ProjectName}/InputHandler.hpp
-#headers
+
+add_executable(${ProjectName} ${ProjectName}/main.cpp ${ProjectName}/OpenglContext.cpp ${ProjectName}/ShaderManager.cpp ${ProjectName}/TextureManager.cpp ${ProjectName}/VertexArrayObject.cpp ${ProjectName}/VertexBufferObject.cpp ${ProjectName}/InputHandler.cpp ${ProjectName}/Engine.cpp ${ProjectName}/Engine.hpp ${ProjectName}/InputHandler.hpp
+
 ${ProjectName}/baseException.hpp ${ProjectName}/init_error.hpp ${ProjectName}/OpenglContext.hpp ${ProjectName}/ShaderManager.hpp ${ProjectName}/TextureManager.hpp ${ProjectName}/VertexArrayObject.hpp ${ProjectName}/VertexBufferObject.hpp)  
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
@@ -23,4 +23,3 @@ target_link_libraries(${ProjectName} glad)
 
 add_subdirectory(vendor/stb)
 target_link_libraries(${ProjectName} stb)
-#add_library(${ProjectName} ${ProjectName}/baseException.hpp)
