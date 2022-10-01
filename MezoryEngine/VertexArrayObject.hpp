@@ -14,7 +14,9 @@ private:
 public:
 	VertexArrayObject() = default;
 	~VertexArrayObject();
-
+/**
+* @brief generates Vertex Array and binding it
+*/
 	void GenAndBindVAO(GLenum type);
 
 /**

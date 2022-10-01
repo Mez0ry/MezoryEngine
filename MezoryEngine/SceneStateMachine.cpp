@@ -1,6 +1,6 @@
 #include "SceneStateMachine.hpp"
 
-SceneStateMachine::SceneStateMachine() : totalSceneID_(0)
+SceneStateMachine::SceneStateMachine() : totalScenes(0)
 {
 
 }
@@ -26,14 +26,14 @@ void SceneStateMachine::Draw()
 
 void SceneStateMachine::Add(std::shared_ptr<Scene> pScene)
 {
-	Scenes_.insert(std::make_pair(totalSceneID_, pScene));
-	totalSceneID_++;
+	Scenes_.insert(std::make_pair(totalScenes, pScene));
+	totalScenes++;
 }
 
 void SceneStateMachine::Remove(unsigned int id)
 {
 	Scenes_.erase(id);
-	totalSceneID_--;
+	totalScenes--;
 }
 
 void SceneStateMachine::TransitionTo(unsigned int id)

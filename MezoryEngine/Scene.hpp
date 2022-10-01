@@ -1,6 +1,8 @@
 #ifndef SCENE_HPP
 #define SCENE_HPP
-
+/**
+* @brief Scene interface
+*/
 class Scene {
 public:
 	virtual ~Scene(){}

@@ -19,7 +19,7 @@ public:
 */
 	void set_TextureParami(GLenum target, GLenum pname, GLint param);
 /**
-* @brief loads and generates texture
+* @brief Loads and generates texture
 */
 	void LoadAndGenerate2DTexture(const char* texture_path, int desired_channels);
 	void BindTexture(GLenum target);
