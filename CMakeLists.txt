@@ -23,3 +23,6 @@ target_link_libraries(${ProjectName} glad)
 
 add_subdirectory(vendor/stb)
 target_link_libraries(${ProjectName} stb)
+
+add_subdirectory(vendor/glm)
+target_link_libraries(${ProjectName} glm)
