@@ -62,14 +62,13 @@ Engine::Engine() : engineLoop_(true)
 	textureManager_.set_TextureParami(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 	textureManager_.set_TextureParami(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
 	textureManager_.set_TextureParami(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
+	
 	textureManager_.LoadAndGenerate2DTexture("..\\MezoryEngine\\ant.jpg", 0);
 
 	GLuint vs, fs, pid;
 	shaderManager_.CreateShader(vertex_shader, GL_VERTEX_SHADER, vs);
 	shaderManager_.CreateShader(fragment_shader, GL_FRAGMENT_SHADER, fs);
 	shaderManager_.LinkShader(pid, vs, fs);
-	
 }
 
 Engine::~Engine()
@@ -96,6 +95,8 @@ void Engine::Play()
 		EventHandler();
 		Update();
 		Draw();
+
+		glfwSwapBuffers(oglContext_.get_window());
 	}
 
 }
@@ -104,13 +105,13 @@ void Engine::EventHandler()
 {
 	if (InputHandler::EnginePollEvent(oglContext_.get_window(), &ev_))
 	{
-		std::cout << "Mouse x: " << ev_.mouse_pos.x << "Mouse y: " << ev_.mouse_pos.y;
+		//std::cout << "Mouse x: " << ev_.mouse_pos.x << "Mouse y: " << ev_.mouse_pos.y;
 		switch (ev_.state)
 		{
 		case GLFW_PRESS: {
 
 			switch (ev_.key) {
-			case GLFW_KEY_Z: {
+			case GLFW_KEY_LEFT: {
 
 				break;
 			}
@@ -129,7 +130,7 @@ void Engine::EventHandler()
 
 void Engine::Update()
 {
-
+	
 }
 
 void Engine::Draw()
@@ -142,5 +143,5 @@ void Engine::Draw()
 	vertexArrayobject_.BindVertexArray();
 
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-	glfwSwapBuffers(oglContext_.get_window());
+ 
 }

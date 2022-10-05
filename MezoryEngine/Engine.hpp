@@ -10,12 +10,17 @@
 #include "TextureManager.hpp"
 #include "SceneStateMachine.hpp"
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 class Engine
 {
 private:
 	InputHandler::EngineEvent ev_;
 	bool engineLoop_ = false;
 	OpenglContext oglContext_;
+	float timer_ = 0;
 public:
 	Engine();
 	~Engine();

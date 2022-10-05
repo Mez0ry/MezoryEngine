@@ -11,17 +11,24 @@ SceneStateMachine::~SceneStateMachine()
 
 void SceneStateMachine::EventHandler()
 {
-	currentScene_.get()->EventHandler();
+	if (!currentScene_) 
+		return;
+
+	currentScene_->EventHandler();
 }
 
 void SceneStateMachine::Update()
 {
-	currentScene_.get()->Update();
+	if (!currentScene_)
+		return;
+	currentScene_->Update();
 }
 
 void SceneStateMachine::Draw()
 {
-	currentScene_.get()->Draw();
+	if (!currentScene_)
+		return;
+	currentScene_->Draw();
 }
 
 void SceneStateMachine::Add(std::shared_ptr<Scene> pScene)

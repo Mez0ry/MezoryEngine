@@ -23,9 +23,13 @@ public:
 * @brief Setting up attribute pointer
 */
 	void BindVboToLocation(const GLuint location_index, const GLint size, VertexBufferObject& obj, GLboolean normalized, GLsizei stride, const void* pointer);
-	
+/**
+* @brief bind a vertex array object
+*/
 	void BindVertexArray();
-
+/**
+* @brief unbind a vertex array object
+*/
 	void UnBind();
 	
 private:

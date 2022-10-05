@@ -33,8 +33,15 @@ public:
 * @brief checks whether the shader is ready to use
 */
 	bool isReady() const noexcept { return isReady_; }
-
+/**
+* @brief Installs a program object as part of current rendering state
+*/
 	void UseProgram();
+/**
+* @return the location of a uniform variable
+* @param [name] - Points to a null terminated string containing the name of the uniform variable whose location is to be queried.
+*/
+	unsigned int GetUniformLocation(const char* name);
 
 public:
 	ShaderManager(const ShaderManager&) = default;

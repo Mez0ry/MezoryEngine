@@ -45,3 +45,8 @@ void ShaderManager::UseProgram()
 
 	glUseProgram(programID_);
 }
+
+unsigned int ShaderManager::GetUniformLocation(const char* name)
+{
+	return glGetUniformLocation(programID_, name);
+}
