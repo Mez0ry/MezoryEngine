@@ -6,7 +6,8 @@ project(${ProjectName})
 
 set (CMAKE_CXX_STANDARD 17)
 
-add_executable(${ProjectName} ${ProjectName}/main.cpp ${ProjectName}/OpenglContext.cpp ${ProjectName}/ShaderManager.cpp ${ProjectName}/TextureManager.cpp ${ProjectName}/VertexArrayObject.cpp ${ProjectName}/VertexBufferObject.cpp ${ProjectName}/InputHandler.cpp ${ProjectName}/Engine.cpp ${ProjectName}/Engine.hpp ${ProjectName}/InputHandler.hpp ${ProjectName}/Scene.hpp ${ProjectName}/SceneStateMachine.hpp ${ProjectName}/SceneStateMachine.cpp ${ProjectName}/Entity.hpp ${ProjectName}/Component.hpp ${ProjectName}/baseException.hpp ${ProjectName}/init_error.hpp ${ProjectName}/OpenglContext.hpp ${ProjectName}/ShaderManager.hpp ${ProjectName}/TextureManager.hpp ${ProjectName}/VertexArrayObject.hpp ${ProjectName}/VertexBufferObject.hpp)
+add_library(${ProjectName} STATIC ${ProjectName}/OpenglContext.cpp ${ProjectName}/ShaderManager.cpp ${ProjectName}/TextureManager.cpp ${ProjectName}/VertexArrayObject.cpp ${ProjectName}/VertexBufferObject.cpp ${ProjectName}/InputHandler.cpp ${ProjectName}/InputHandler.hpp ${ProjectName}/Scene.hpp ${ProjectName}/SceneStateMachine.hpp ${ProjectName}/SceneStateMachine.cpp ${ProjectName}/Entity.hpp ${ProjectName}/Component.hpp ${ProjectName}/baseException.hpp ${ProjectName}/init_error.hpp ${ProjectName}/OpenglContext.hpp ${ProjectName}/ShaderManager.hpp ${ProjectName}/TextureManager.hpp ${ProjectName}/VertexArrayObject.hpp ${ProjectName}/VertexBufferObject.hpp)
+target_include_directories(${ProjectName} PUBLIC ${ProjectName}/)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
